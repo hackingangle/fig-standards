@@ -59,7 +59,7 @@ interpreted as described in [RFC 2119][].
 PHP code MUST use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it
 MUST NOT use the other tag variations.
 
-PHP代码必须使用形如：`<?php ?>`的长标签或形如<?= ?>的短标签；不可以使用其他的标签类型。
+PHP代码必须使用形如：`<?php ?>`的长标签或形如`<?= ?>`的短标签；不可以使用其他的标签类型。
 
 ### 2.2. Character Encoding
 ### 2.2. 字符编码
