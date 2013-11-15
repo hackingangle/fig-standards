@@ -1,37 +1,49 @@
 Basic Coding Standard
 =====================
+基本代码编写标准
+=====================
 
 This section of the standard comprises what should be considered the standard
 coding elements that are required to ensure a high level of technical
 interoperability between shared PHP code.
+这部分标准用来保证共享代码的技术互操作性。
+
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119][].
+不同紧要性的关键词：MUST,MUST NOT,REQUIRED,SHALL,SHALL NOT,SHOULD,SHOULD NOT,RECOMMENDED,MAY,OPTIONAL
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 
 
 1. Overview
+1. 概述
 -----------
 
 - Files MUST use only `<?php` and `<?=` tags.
+- 代码文件仅必须[MUST]使用 `<?php` 和 `<?=` 标记
 
 - Files MUST use only UTF-8 without BOM for PHP code.
+- 代码文件仅必须[MUST]使用UTF-8 without BOM的字符集编码
 
 - Files SHOULD *either* declare symbols (classes, functions, constants, etc.)
   *or* cause side-effects (e.g. generate output, change .ini settings, etc.)
   but SHOULD NOT do both.
+- 代码文件（可能被其他代码包含），其中不应该同时包含存声明（类，方法，常量等）和可能引起服务器状态发生变化的代码（生成，输出，改变 初始化数据和设置等）
 
 - Namespaces and classes MUST follow [PSR-0][].
+- 命名空间和类名必须遵循[PSR-0]
 
 - Class names MUST be declared in `StudlyCaps`.
+- 类名必须声明成单词首字母全大写格式，如：HappyPerson
 
 - Class constants MUST be declared in all upper case with underscore separators.
+- 类常量必须使用全大写字母和下划线组成
 
 - Method names MUST be declared in `camelCase`.
-
+- 方法名称必须声明成首个单词首个字母小写，其他单词首个字母大写，如：slowLife()
 
 2. Files
 --------
